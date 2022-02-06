@@ -21,7 +21,11 @@ const AppTitle = styled.h2`
 
 class Login extends React.Component {
   render() {
-    return <h1> login </h1>;
+    return (
+      <Whole>
+        <AppTitle>RUBY TALK</AppTitle>
+      </Whole>
+    );
   }
 }
 

@@ -10,12 +10,22 @@ const ContentWrapper = styled.section`
   overflow: scroll;
 `;
 
+const NavWrapper = styled.section`
+  width: 100%;
+  height: 60px;
+`;
+
 class App extends React.Component {
   render() {
     return (
-      <Routes>
-        <Route exaxt path="/" element={<Login />} />
-      </Routes>
+      <>
+        <Routes>
+          <Route exaxt path="/" element={<Login />} />
+        </Routes>
+        <ContentWrapper>
+          <Routes></Routes>
+        </ContentWrapper>
+      </>
     );
   }
 }
