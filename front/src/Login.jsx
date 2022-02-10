@@ -104,8 +104,26 @@ const Login = () => {
   return (
     <Whole>
       <AppTitle>RUBY TALK</AppTitle>
-
-      <SignButton type="primary">{step === 1 ? "SIGN IN" : "CHECK"}</SignButton>
+      <LoginBox>
+        <InputGuide>
+          {step === 1 ? "이메일을 입력해주세요" : "인증번호를 입력해주세요"}
+        </InputGuide>
+        {step === 1 ? (
+          <InputEmail
+            placeholder="ruby@talk.com"
+            value={email}
+            onChange={onChangeInput}
+          ></InputEmail>
+        ) : (
+          <InputEmail value={code} onChange={onChangeCode} />
+        )}
+      </LoginBox>
+      <SignButton
+        type="primary"
+        onClick={step === 1 ? () => loginAction() : () => codeCheckAction()}
+      >
+        {step === 1 ? "SIGN IN" : "CHECK"}
+      </SignButton>
 
       <SignButton type="primary">{step === 1 ? "SIGN UP" : "CHECK"}</SignButton>
     </Whole>
