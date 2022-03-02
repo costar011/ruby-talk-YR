@@ -2,8 +2,6 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import Login from "./Login";
-import Friend from "./Friend";
-import BottomNav from "./BottomNav";
 
 const ContentWrapper = styled.section`
   width: 100%;
@@ -24,18 +22,6 @@ class App extends React.Component {
         <Routes>
           <Route exaxt path="/" element={<Login />} />
         </Routes>
-
-        <ContentWrapper>
-          <Routes>
-            <Route exaxt path="/friend" element={<Friend />} />
-          </Routes>
-        </ContentWrapper>
-
-        <NavWrapper>
-          <Routes>
-            <Route exaxt path="/friend" element={<BottomNav />} />
-          </Routes>
-        </NavWrapper>
       </>
     );
   }
